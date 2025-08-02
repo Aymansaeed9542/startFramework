@@ -1,0 +1,39 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar {
+  font-family: "Roboto", sans-serif;
+  background-color: #2d3e50;
+  padding: 2rem 6rem 2rem 6rem;
+
+}
+
+.navbarList {
+  display: flex;
+  gap: 2.2rem;
+  list-style: none;
+  font-size: 1rem;
+  font-weight: bold;
+
+}
+
+.navbarLink {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.navbarLink:hover {
+  text-decoration: underline;
+}
+h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: bold;
+}

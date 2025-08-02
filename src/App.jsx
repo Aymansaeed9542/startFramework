@@ -1,7 +1,11 @@
-import './App.css'
-import Navbar from './component/navbar/navbar.jsx'
+import Navbar from './components/navbar/navbar.jsx'
 import { createBrowserRouter } from 'react-router-dom';
+import { RouterProvider } from 'react-router-dom';
 import Layout from './components/layout/layout.jsx';
+import Home from './components/home/home.jsx';
+import About from './components/about/about.jsx';
+import Portfolio from './components/portfolio/portfolio.jsx';
+import Contact from './components/contact/contact.jsx';
 
 function App() {
   const router = createBrowserRouter([{
