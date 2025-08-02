@@ -1,4 +1,5 @@
 import Navbar from './components/navbar/navbar.jsx'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { createBrowserRouter } from 'react-router-dom';
 import { RouterProvider } from 'react-router-dom';
 import Layout from './components/layout/layout.jsx';

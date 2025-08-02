@@ -29,9 +29,6 @@
   text-decoration: none;
 }
 
-.navbarLink:hover {
-  text-decoration: underline;
-}
 h2 {
   color: #ffffff;
   font-size: 2rem;

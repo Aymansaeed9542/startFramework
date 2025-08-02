@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
   <nav className={`${style.navbar} ${style.flex}`}>
     <div className={style}>
-      <h2>START FRAMEWORK</h2>
+      <h2><NavLink to="/" className={style.navbarLink}>START FRAMEWORK</NavLink></h2>
     </div>
     <div>
       <ul className={style.navbarList}>
@@ -14,7 +14,7 @@ const Navbar = () => {
           <NavLink to="/about" className={style.navbarLink}>ABOUT</NavLink>
         </li>
         <li>
-          <NavLink to="/" className={style.navbarLink}>PORTFOLIO</NavLink>
+          <NavLink to="/portfolio" className={style.navbarLink}>PORTFOLIO</NavLink>
         </li>
         <li>
           <NavLink to="/contact" className={style.navbarLink}>CONTACT</NavLink>
