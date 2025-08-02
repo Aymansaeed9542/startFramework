@@ -1,10 +1,14 @@
 import React from 'react';
-
+import style from './home.module.css';
+import img from "../../assets/avataaars.svg";
 const Home = () => {
   return (
-    <div>
-      <h1>Home Page</h1>
-      <p>Welcome to the home page</p>
+    <div className={`${style.home} text-center text-white d-flex flex-column justify-content-center align-items-center`}>
+      <div className={`${style.avatar} w-100 d-flex justify-content-center`}>
+        <img src={img} alt="Avatar" />
+      </div>
+      <h1>START FRAMEWORK</h1>
+      <p>Graphic Artist - Web Designer - Illustrator</p>
     </div>
   );
 };
