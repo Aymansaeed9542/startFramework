@@ -12,7 +12,11 @@
   font-family: "Roboto", sans-serif;
   background-color: #2d3e50;
   padding: 2rem 6rem 2rem 6rem;
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .navbarList {
