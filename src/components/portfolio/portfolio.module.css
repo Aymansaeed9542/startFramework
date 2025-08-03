@@ -1,0 +1,30 @@
+.portfolio{
+    width: 100%;
+    color: #2d3e50;
+}
+.portfolio h1{
+    margin-top:8rem ;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.line{
+    width: 80px;
+    height: 4px;
+    background-color: #2d3e50;
+}
+.item{
+    width: 100px;
+    height: 100px;  
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
