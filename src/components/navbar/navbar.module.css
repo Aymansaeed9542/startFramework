@@ -1,40 +1,71 @@
-*{
+/* Remove the global reset that might conflict with Bootstrap */
+/* *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
+
 .flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .navbar {
   font-family: "Roboto", sans-serif;
   background-color: #2d3e50;
-  padding: 2rem 6rem 2rem 6rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  padding: 1rem 0;
   z-index: 1000;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-.navbarList {
-  display: flex;
-  gap: 2.2rem;
-  list-style: none;
-  font-size: 1rem;
-  font-weight: bold;
-
-}
-
-.navbarLink {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-}
-
-h2 {
+.navbar-brand {
   color: #ffffff;
-  font-size: 2rem;
+  font-size: 1.75rem; /* Reduced from 2rem */
   font-weight: bold;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.nav-link {
+  color: #ffffff;
+  font-weight: bold;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.nav-link:hover {
+  color: #1bbc9b;
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .nav-link {
+    margin: 0.5rem 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .navbar-brand {
+    font-size: 1.25rem; /* Further reduced for mobile */
+  }
+  
+  .navbar {
+    padding: 0.75rem 0; /* Reduce padding on mobile */
+  }
 }

@@ -1,0 +1,18 @@
+/* Global styles to prevent horizontal scroll */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Ensure all containers respect viewport width */
+.container {
+  max-width: 100%;
+  overflow-x: hidden;
+}

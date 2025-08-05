@@ -1,38 +1,66 @@
 .contact{
     width: 100%;
     color: #2d3e50;
-    height: 97vh;
+    min-height: 100vh;
+    padding-top: 80px; /* Account for fixed navbar */
 }
-.contact h1{
-    margin-top:8rem ;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #2d3e50;
-}
+
 .line{
     width: 80px;
     height: 4px;
     background-color: #2d3e50;
 }
+
 .form{
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
 }
-.form input{
+
+.inputField {
     width: 100%;
     padding: 1rem;
-    margin: 1rem 0;
+    margin-bottom: 1rem;
     border: 1px solid #ccc;
     border-top: none;
     border-left: none;
     border-right: none;
     border-radius: 4px;
     transition: all 0.3s ease;
+    background-color: transparent;
 }
-.form input:focus{
+
+.inputField:focus{
     outline: none;
     border-color: #2d3e50;
+    box-shadow: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .line {
+        width: 60px;
+        height: 3px;
+    }
+    
+    .form {
+        margin-top: 1.5rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .line {
+        width: 50px;
+        height: 2px;
+    }
+    
+    .form {
+        margin-top: 1rem;
+    }
+    
+    .inputField {
+        padding: 0.75rem;
+    }
 }

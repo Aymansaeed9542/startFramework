@@ -1,28 +1,47 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link , NavLink }  from 'react-router-dom'
 import style from './navbar.module.css'
+
 const Navbar = () => {
+  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+
+  const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
   return (
-  <nav className={`${style.navbar} ${style.flex}`}>
-    <div className={style}>
-      <h2><NavLink to="/" className={style.navbarLink}>START FRAMEWORK</NavLink></h2>
-    </div>
-    <div>
-      <ul className={style.navbarList}>
-        <li>
-          <NavLink to="/about" className={style.navbarLink}>ABOUT</NavLink>
-        </li>
-        <li>
-          <NavLink to="/portfolio" className={style.navbarLink}>PORTFOLIO</NavLink>
-        </li>
-        <li>
-          <NavLink to="/contact" className={style.navbarLink}>CONTACT</NavLink>
-        </li>
+    <nav className={`${style.navbar} navbar navbar-expand-lg navbar-dark fixed-top`}>
+      <div className="container">
+        <NavLink to="/" className="navbar-brand fw-bold fs-2 text-white">
+          START FRAMEWORK
+        </NavLink>
         
-      </ul>
-    </div>
-  </nav>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded={!isNavCollapsed ? true : false}
+          aria-label="Toggle navigation"
+          onClick={handleNavCollapse}
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        
+        <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarNav">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
+              <NavLink to="/about" className="nav-link fw-bold">ABOUT</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/portfolio" className="nav-link fw-bold">PORTFOLIO</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/contact" className="nav-link fw-bold">CONTACT</NavLink>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   )
 }
 
